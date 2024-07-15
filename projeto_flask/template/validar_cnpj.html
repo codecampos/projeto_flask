@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validar CNPJ</title>
+</head>
+<body>
+    <h1>Validar CNPJ</h1>
+    <form method="post">
+        <label for="cnpj">CNPJ:</label>
+        <input type="text" id="cnpj" name="cnpj" required>
+        <button type="submit">Validar</button>
+    </form>
+    {% if cnpj %}
+        <p>O CNPJ {{ cnpj }} é {{ 'válido' if valido else 'inválido' }}.</p>
+    {% endif %}
+</body>
+</html>

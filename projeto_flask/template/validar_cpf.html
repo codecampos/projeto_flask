@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validar CPF</title>
+</head>
+<body>
+    <h1>Validar CPF</h1>
+    <form method="post">
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" name="cpf" required>
+        <button type="submit">Validar</button>
+    </form>
+    {% if cpf %}
+        <p>O CPF {{ cpf }} é {{ 'válido' if valido else 'inválido' }}.</p>
+    {% endif %}
+</body>
+</html>
